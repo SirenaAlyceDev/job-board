@@ -80,3 +80,11 @@ a {
 a.cta {
   background-color: #E3C57F;
 }
+
+p.card-text {
+  color: #000;
+}
+
+div.card-title {
+  color: #000;
+}
