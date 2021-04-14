@@ -20,7 +20,13 @@ function Header() {
                         <NavLink href="/">Home</NavLink>
                     </NavItem>
                     <NavItem>
-                        <Button variant="contained" href="/">Try It Out!</Button>
+                        <Button size="small" href="/">Login</Button>
+                    </NavItem>
+                    <NavItem>
+                        <Button size="medium" href="/">Get Hired!</Button>
+                    </NavItem>
+                    <NavItem>
+                        <Button size="medium" href="/">Find Talent!</Button>
                     </NavItem>
                 </Nav>
               </Collapse>
