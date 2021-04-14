@@ -120,7 +120,7 @@ function Form({ currentId, setCurrentId }) {
           }
         />      
         <Button variant="contained" type="submit" fullWidth>
-          Add Job Listing
+        {currentId ? "Editing" : "Add"} Job Listing
         </Button>
         <Button variant="contained" onClick={clear} fullWidth>
           Clear
