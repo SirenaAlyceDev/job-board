@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import { Switch, Route, Redirect } from 'react-router-dom';
 import LandingPage from './LandingPageComponent';
-import HeaderComponent from './HeaderComponent'; 
 import Login from './LoginComponent';
 import EmployerSignUp from './EmployerSignUpComponent';
 import ApplicantSignup from './ApplicantSignUpComponent';
