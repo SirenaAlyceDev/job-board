@@ -5,7 +5,7 @@ import HeaderComponent from './HeaderComponent';
 import Login from './LoginComponent';
 import EmployerSignUp from './EmployerSignUpComponent';
 import ApplicantSignup from './ApplicantSignUpComponent';
-
+import EmployerComponent from './EmployerComponent';
 class Main extends Component {
     render() {
         const HomePage = () => {
@@ -21,6 +21,7 @@ class Main extends Component {
                     <Route path='/login' component={Login} />
                     <Route path='/applicant-signup' component={ApplicantSignup} />
                     <Route path='/employer-signup' component={EmployerSignUp} />
+                    <Route path='/employer-dashboard' component={EmployerComponent} />
                     <Redirect to='/home' />
                 </Switch>
             </div>

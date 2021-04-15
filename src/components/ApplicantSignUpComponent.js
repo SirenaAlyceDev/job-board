@@ -29,7 +29,7 @@ function ApplicantSignup() {
     <Container component="main" maxWidth="xs">
       <div>
         <Typography component="h1" variant="h5">
-          Sign up
+          Job Seeker Sign up
         </Typography>
         <form  noValidate>
           <Grid container spacing={2}>

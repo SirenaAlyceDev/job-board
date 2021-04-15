@@ -1,6 +1,5 @@
 import React from "react";
 import Footer from "./FooterComponent";
-import Header from "./HeaderComponent";
 import "bootstrap/dist/css/bootstrap.min.css";
 import {
   Container,
@@ -19,7 +18,6 @@ import TextField from "@material-ui/core/TextField";
 function LandingPage() {
   return (
     <>
-      {/* <Header /> */}
       <Container>
         <Row className="align-items-center mb-2 p-2">
           <Col className="p-2">
