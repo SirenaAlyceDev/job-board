@@ -26,9 +26,6 @@ function Header() {
           <Collapse isOpen={isOpen} navbar>
             <Nav className="ml-auto" navbar>
               <NavItem>
-                <NavLink className="nav-link" to="/">
-                  Home
-                </NavLink>
               </NavItem>
               <NavItem>
                 <NavLink className="nav-link" to="/login">
