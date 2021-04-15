@@ -52,7 +52,7 @@ a.nav-link {
 }
 
 .navbar {
-  border: 2px solid green;
+  /* border: 2px solid green; */
   color: #fff;
   font-family: "Open Sans", sans-serif;
 }

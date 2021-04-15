@@ -10,6 +10,8 @@ import {
   FormControlLabel,
   Link,
 } from "@material-ui/core";
+import HeaderComponent from './HeaderComponent';
+
 
 function Copyright() {
   return (
@@ -26,6 +28,8 @@ function Copyright() {
 
 function EmployerSignUp() {
   return (
+    <>
+    <HeaderComponent/>
     <Container component="main" maxWidth="xs">
       <div>
         <Typography component="h1" variant="h5">
@@ -117,6 +121,7 @@ function EmployerSignUp() {
         <Copyright />
       </Box>
     </Container>
+    </>
   );
 }
 

@@ -10,6 +10,7 @@ import {
   FormControlLabel,
 } from "@material-ui/core";
 import { Link } from 'react-router-dom';
+import HeaderComponent from './HeaderComponent';
 
 function Copyright() {
   return (
@@ -26,6 +27,8 @@ function Copyright() {
 
 function Login() {
   return (
+    <>
+    <HeaderComponent />
     <Container maxWidth="md">
       <div>
         <Typography component="h1" variant="h5">
@@ -118,6 +121,7 @@ function Login() {
                 control={<Checkbox value="remember" color="primary" />}
                 label="Remember me"
               />
+              <Link to="/applicant-dashboard">
               <Button
                 type="submit"
                 fullWidth
@@ -126,6 +130,7 @@ function Login() {
               >
                 Sign In
               </Button>
+              </Link>
               <Grid container>
                 <Grid item xs>
                   <Link href="#" variant="body2">
@@ -146,6 +151,7 @@ function Login() {
         <Copyright />
       </Box>
     </Container>
+    </>
   );
 }
 

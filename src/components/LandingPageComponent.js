@@ -14,19 +14,30 @@ import {
 } from "reactstrap";
 import Button from "@material-ui/core/Button";
 import TextField from "@material-ui/core/TextField";
+import HeaderComponent from './HeaderComponent';
+import { Link } from 'react-router-dom';
 
 function LandingPage() {
   return (
     <>
+                    <HeaderComponent />
+
       <Container>
         <Row className="align-items-center mb-2 p-2">
           <Col className="p-2">
-            <h1>Header/Title</h1>
+            <h1>Seekaty</h1>
             <h2>Subtitle</h2>
             <p>blurb</p>
-            <Button variant="contained" href="/">
-              CTA
-            </Button>
+            <Link to='/applicant-signup'>
+              <Button classname="cta" variant="contained" href="/">
+                Find Opportunities!
+              </Button>
+              </Link>
+              <Link to='/employer-signup'>
+              <Button classname="cta" variant="contained" href="/">
+                Find Talent!
+              </Button>
+              </Link>
           </Col>
           <Col>
             <p>image/video goes here</p>
@@ -84,16 +95,23 @@ function LandingPage() {
             <h2 className="text-center">Team</h2>
           </Col>
         </Row>
-        <Row className="align-items-center p-2">
+        {/* <Row className="align-items-center p-2">
           <Col>
             <Form className="text-center">
               <TextField label="Email"></TextField>
+              <Link to='/applicant-signup'>
               <Button classname="cta" variant="contained" href="/">
-                CTA
+                Find Opportunities!
               </Button>
+              </Link>
+              <Link to='/employer-signup'>
+              <Button classname="cta" variant="contained" href="/">
+                Find Talent!
+              </Button>
+              </Link>
             </Form>
           </Col>
-        </Row>
+        </Row> */}
         <Footer />
       </Container>
     </>

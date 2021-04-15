@@ -21,7 +21,7 @@ function Header() {
   return (
       <div>
         <Navbar expand="md" fluid>
-          <NavbarBrand href="/">Web App Name</NavbarBrand>
+          <NavbarBrand href="/">Seekaty</NavbarBrand>
           <NavbarToggler onClick={toggle} />
           <Collapse isOpen={isOpen} navbar>
             <Nav className="ml-auto" navbar>
