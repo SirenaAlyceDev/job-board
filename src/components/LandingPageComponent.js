@@ -19,7 +19,7 @@ import TextField from "@material-ui/core/TextField";
 function LandingPage() {
   return (
     <>
-      <Header />
+      {/* <Header /> */}
       <Container>
         <Row className="align-items-center mb-2 p-2">
           <Col className="p-2">
