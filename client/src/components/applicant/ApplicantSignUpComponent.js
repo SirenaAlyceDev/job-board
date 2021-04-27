@@ -10,7 +10,7 @@ import {
   FormControlLabel,
   Link,
 } from "@material-ui/core";
-import HeaderComponent from './HeaderComponent';
+import HeaderComponent from '../HeaderComponent';
 
 function Copyright() {
   return (

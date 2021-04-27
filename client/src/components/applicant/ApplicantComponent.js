@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
-import { getPosts } from "../actions/posts";
-import Posts from "../components/employer/Posts/PostsComponent";
+import { getPosts } from "../../actions/posts";
+import Posts from "../employer/Posts/PostsComponent";
 import {
   Container,
   Grid,

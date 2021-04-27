@@ -11,7 +11,7 @@ function Form({ currentId, setCurrentId }) {
     salary: "",
     remote: "",
     position: "",
-    closing: new Date(),
+    closing: new Date().getUTCMonth() + "-" + new Date().getDay() + "-" + new Date().getFullYear(),
     details: "",
   });
   const post = useSelector((state) => currentId ? state.posts.find((p) => p._id === currentId) : null );
@@ -41,7 +41,7 @@ function Form({ currentId, setCurrentId }) {
     salary: "",
     remote: "",
     position: "",
-    closing: new Date(),
+    closing: new Date().getFullYear(),
     details: "",})
   };
 
