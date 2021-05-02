@@ -1,119 +1,118 @@
 import React from "react";
+import HeaderComponent from "./HeaderComponent";
 import Footer from "./FooterComponent";
 import "bootstrap/dist/css/bootstrap.min.css";
 import {
+  Button,
+  Box,
   Container,
-  Row,
-  Col,
+  Grid,
   Card,
-  CardDeck,
-  CardBody,
-  CardTitle,
-  CardText,
-  // Form,
-} from "reactstrap";
-import Button from "@material-ui/core/Button";
-// import TextField from "@material-ui/core/TextField";
-import HeaderComponent from './HeaderComponent';
-import { Link } from 'react-router-dom';
+  CardContent,
+  Typography,
+} from "@material-ui/core";
+import blackwoman from '../assets/blkwoman.png'
+import { makeStyles } from "@material-ui/core/styles";
+import { Link as RouterLink } from 'react-router-dom';
+
+const useStyles = makeStyles({
+  fullHeightCard: {
+    height: "100%",
+  },
+  button: {
+    marginRight: "10px"
+  }
+});
 
 function LandingPage() {
+  const classes = useStyles();
+
   return (
     <>
-                    <HeaderComponent />
-
-      <Container>
-        <Row className="align-items-center mb-2 p-2">
-          <Col className="p-2">
-            <h1>Seekaty</h1>
-            <h2>Subtitle</h2>
-            <p>blurb</p>
-            <Link to='/applicant-signup'>
-              <Button classname="cta" variant="contained" href="/">
-                Find Opportunities!
-              </Button>
-              </Link>
-              <Link to='/employer-signup'>
-              <Button classname="cta" variant="contained" href="/">
-                Find Talent!
-              </Button>
-              </Link>
-          </Col>
-          <Col>
-            <p>image/video goes here</p>
-          </Col>
-        </Row>
-        <Row className="mb-2 p-2">
-          <CardDeck>
-            <Card>
-              <CardBody>
-                <CardTitle>Feature #1</CardTitle>
-                <CardText>
-                  Apple pie sesame snaps pie. Candy jelly caramels lemon drops
-                  topping gummies oat cake cotton candy. Cookie chocolate
-                  cheesecake tiramisu cupcake apple pie cake lemon drops.
-                </CardText>
-              </CardBody>
-            </Card>
-            <Card>
-              <CardBody>
-                <CardTitle>Feature #2</CardTitle>
-                <CardText>
-                  Croissant marzipan sugar plum cake sesame snaps gingerbread.
-                  Apple pie marzipan macaroon pie bear claw. Cake tootsie roll
-                  tiramisu bear claw sweet donut cupcake bear claw liquorice.
-                  Chupa chups cheesecake chocolate chocolate bar cotton candy
-                  cotton candy topping pastry donut.
-                </CardText>
-              </CardBody>
-            </Card>
-            <Card>
-              <CardBody>
-                <CardTitle>Feature #3</CardTitle>
-                <CardText>
-                  Gummies sweet fruitcake bonbon marshmallow sweet roll cake
-                  donut candy. Cake icing candy. Oat cake macaroon danish.
-                  Gummies jujubes marshmallow.
-                </CardText>
-              </CardBody>
-            </Card>
-          </CardDeck>
-        </Row>
-        <Row className="align-items-center text-center mb-2 p-2">
-          <Col>social proof 1</Col>
-          <Col>social proof 1</Col>
-          <Col>social proof 1</Col>
-          <Col>social proof 1</Col>
-        </Row>
-        <Row className="align-items-center mb-2 p-2">
-          <Col>
-            <h2 className="text-center">How The App Works</h2>
-          </Col>
-        </Row>
-        <Row className="align-items-center mb-2 p-2">
-          <Col>
-            <h2 className="text-center">Team</h2>
-          </Col>
-        </Row>
-        {/* <Row className="align-items-center p-2">
-          <Col>
-            <Form className="text-center">
-              <TextField label="Email"></TextField>
-              <Link to='/applicant-signup'>
-              <Button classname="cta" variant="contained" href="/">
-                Find Opportunities!
-              </Button>
-              </Link>
-              <Link to='/employer-signup'>
-              <Button classname="cta" variant="contained" href="/">
-                Find Talent!
-              </Button>
-              </Link>
-            </Form>
-          </Col>
-        </Row> */}
-        <Footer />
+      <HeaderComponent />
+      <Container maxWidth={false}>
+        <Box m={2}>
+          <Grid container spacing={0}>
+            <Grid item xs={12} sm={6}>
+              <Typography variant="h1">Seekaty</Typography>
+              <Typography variant="h2">Subtitle</Typography>
+              <Typography variant="subtitle1" gutterBottom>
+                blurb
+              </Typography>
+                  <Button className={classes.button} variant="contained" component={RouterLink} to="/applicant-signup">Find Opportunities!</Button>
+                  <Button className={classes.button} variant="contained" component={RouterLink} to="/employer-signup">Find Talent!</Button>
+            </Grid>
+            <Grid item xs={12} sm={6}>
+              <img src={blackwoman} alt="black woman"/>
+            </Grid>
+          </Grid>
+        </Box>
+        <Box m={2}>
+          <Grid container spacing={1}>
+            <Grid item xs={12} sm={4}>
+              <Card className={classes.fullHeightCard}>
+                <CardContent>
+                  <Typography>Feature #1</Typography>
+                  <Typography>
+                    Apple pie sesame snaps pie. Candy jelly caramels lemon drops
+                    topping gummies oat cake cotton candy. Cookie chocolate
+                    cheesecake tiramisu cupcake apple pie cake lemon drops.
+                  </Typography>
+                </CardContent>
+              </Card>
+            </Grid>
+            <Grid item xs={12} sm={4}>
+              <Card className={classes.fullHeightCard}>
+                <CardContent>
+                  <Typography>Feature #3</Typography>
+                  <Typography>
+                    Gummies sweet fruitcake bonbon marshmallow sweet roll cake
+                    donut candy. Cake icing candy. Oat cake macaroon danish.
+                    Gummies jujubes marshmallow.
+                  </Typography>
+                </CardContent>
+              </Card>
+            </Grid>
+            <Grid item xs={12} sm={4}>
+              <Card className={classes.fullHeightCard}>
+                <CardContent>
+                  <Typography>Feature #2</Typography>
+                  <Typography>
+                    Croissant marzipan sugar plum cake sesame snaps gingerbread.
+                    Apple pie marzipan macaroon pie bear claw. Cake tootsie roll
+                    tiramisu bear claw sweet donut cupcake bear claw liquorice.
+                    Chupa chups cheesecake chocolate chocolate bar cotton candy
+                    cotton candy topping pastry donut.
+                  </Typography>
+                </CardContent>
+              </Card>
+            </Grid>
+          </Grid>
+        </Box>
+        <Box m={2}>
+          <Grid container spacing={1}>
+            <Grid item>social proof 1</Grid>
+            <Grid item>social proof 1</Grid>
+            <Grid item>social proof 1</Grid>
+            <Grid item>social proof 1</Grid>
+          </Grid>
+        </Box>
+        <Box m={2}>
+          <Grid container>
+            <Grid item>
+              <Typography variant="h2">How The App Works</Typography>
+            </Grid>
+          </Grid>
+        </Box>
+        <Box m={2}>
+          <Grid container>
+            <Grid item>
+              <Typography variant="h2">Team</Typography>
+            </Grid>
+          </Grid>
+        </Box>
       </Container>
+      <Footer />
     </>
   );
 }

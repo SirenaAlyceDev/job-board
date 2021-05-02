@@ -15,11 +15,6 @@ function App() {
     <Provider store={store}>
       <BrowserRouter>
       <Main />
-        {/* <LandingPage /> */}
-        {/* <EmployerComponent /> */}
-        {/* <Login />
-     <EmployerSignUp />
-     <ApplicantSignup /> */}
       </BrowserRouter>
     </Provider>
   );
