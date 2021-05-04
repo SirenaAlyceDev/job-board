@@ -28,9 +28,12 @@ function ApplicantProfile() {
             <Grid item>
               <Card>
                 <CardActionArea>
-                  <CardMedia />
+                  <CardMedia component="img" src="" alt="Profile Picture" />
                   <CardContent>
                     <Typography>Name</Typography>
+                    <Typography>Location</Typography>
+                    <Typography>Current Title</Typography>
+                    <Typography>Available for work?</Typography>
                   </CardContent>
                 </CardActionArea>
                 <CardActions>
@@ -41,7 +44,10 @@ function ApplicantProfile() {
               </Card>
             </Grid>
             <Grid item>
-              <Card>test</Card>
+              <Card>
+                <Typography>Skills</Typography>
+                <Typography>list of skills</Typography>
+              </Card>
             </Grid>
           </Grid>
         </Grid>
@@ -59,7 +65,7 @@ function ApplicantProfile() {
             <Grid item>
               <Card>test</Card>
             </Grid>
-          </Grid>{" "}
+          </Grid>
         </Grid>
       </Grid>
     </Container>
