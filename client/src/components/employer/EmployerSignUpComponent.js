@@ -10,6 +10,8 @@ import {
   FormControlLabel,
   Link,
 } from "@material-ui/core";
+import { ThemeProvider } from "@material-ui/core/styles";
+import theme from "../theme";
 import HeaderComponent from '../HeaderComponent';
 
 
@@ -30,6 +32,7 @@ function EmployerSignUp() {
   return (
     <>
     <HeaderComponent/>
+    <ThemeProvider theme={theme}>
     <Container component="main" maxWidth="xs">
       <div>
         <Typography component="h1" variant="h5">
@@ -121,6 +124,7 @@ function EmployerSignUp() {
         <Copyright />
       </Box>
     </Container>
+    </ThemeProvider>
     </>
   );
 }

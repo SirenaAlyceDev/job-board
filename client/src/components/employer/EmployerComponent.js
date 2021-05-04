@@ -31,7 +31,7 @@ useEffect(() => {
         <Grid item xs={12} sm={2}>
         <Paper>
         <MenuList>
-          <MenuItem><PersonIcon />Profile</MenuItem>
+          <MenuItem><Link to="/employer-profile"><PersonIcon />Profile</Link></MenuItem>
           <MenuItem><Link to="/active-jobs"><TrackChangesIcon/>Active Jobs</Link></MenuItem>
           <MenuItem><Link to="/expired-jobs"><ErrorIcon/>Expired Jobs</Link></MenuItem>
           <MenuItem><Link to="/applicants"><PeopleIcon />Applicants</Link></MenuItem>

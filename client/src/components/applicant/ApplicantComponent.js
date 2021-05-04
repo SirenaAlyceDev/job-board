@@ -15,7 +15,6 @@ import TrackChangesIcon from "@material-ui/icons/TrackChanges";
 import ExitToAppIcon from "@material-ui/icons/ExitToApp";
 import FavoriteIcon from '@material-ui/icons/Favorite';
 import WorkIcon from '@material-ui/icons/Work';
-
 import { useDispatch } from "react-redux";
 import { Link } from "react-router-dom";
 
@@ -38,10 +37,7 @@ function ApplicantComponent() {
         <Grid item xs={12} sm={2}>
           <Paper>
             <MenuList>
-              <MenuItem>
-                <PersonIcon />
-                Profile
-              </MenuItem>
+            <MenuItem><Link to="/applicant-profile"><PersonIcon />Profile</Link></MenuItem>
               <MenuItem>
                 <WorkIcon />
                 Jobs

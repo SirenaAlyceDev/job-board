@@ -10,6 +10,8 @@ import {
   FormControlLabel,
   Link,
 } from "@material-ui/core";
+import { ThemeProvider } from "@material-ui/core/styles";
+import theme from "../theme";
 import HeaderComponent from '../HeaderComponent';
 
 function Copyright() {
@@ -29,6 +31,7 @@ function ApplicantSignup() {
   return (
     <>
     <HeaderComponent />
+    <ThemeProvider theme={theme}>
     <Container component="main" maxWidth="xs">
       <div>
         <Typography component="h1" variant="h5">
@@ -110,6 +113,7 @@ function ApplicantSignup() {
         <Copyright />
       </Box>
     </Container>
+    </ThemeProvider>
     </>
   );
 }

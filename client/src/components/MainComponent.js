@@ -10,6 +10,8 @@ import ActiveJobs from './employer/ActiveJobsComponent';
 import ApplicantList from './employer/ApplicantListComponent';
 import ExpiredJobs from './employer/ExpiredJobsComponent';
 import EmployerNotificaitons from './employer/NotificationsComponent';
+import EmployerProfile from './employer/EmployerProfileComponent';
+import ApplicantProfile from './applicant/ApplicantProfileComponent';
 class Main extends Component {
     render() {
         const HomePage = () => {
@@ -30,6 +32,8 @@ class Main extends Component {
                     <Route path='/expired-jobs' component={ExpiredJobs} />
                     <Route path='/applicants' component={ApplicantList} />
                     <Route path='/employer-notifications' component={EmployerNotificaitons} />
+                    <Route path='/employer-profile' component={EmployerProfile} />
+                    <Route path='/applicant-profile' component={ApplicantProfile} />
                     <Redirect to='/home' />
                 </Switch>
             </div>

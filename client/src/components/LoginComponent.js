@@ -9,8 +9,11 @@ import {
   Checkbox,
   FormControlLabel,
 } from "@material-ui/core";
+import { ThemeProvider } from "@material-ui/core/styles";
 import { Link } from 'react-router-dom';
 import HeaderComponent from './HeaderComponent';
+import theme from "../components/theme.js";
+
 
 function Copyright() {
   return (
@@ -29,6 +32,7 @@ function Login() {
   return (
     <>
     <HeaderComponent />
+    <ThemeProvider theme={theme}>
     <Container maxWidth="md">
       <div>
         <Typography component="h1" variant="h5">
@@ -151,6 +155,7 @@ function Login() {
         <Copyright />
       </Box>
     </Container>
+    </ThemeProvider>
     </>
   );
 }
